@@ -1,7 +1,9 @@
-DNS Switch for macOS 🛡️
+**DNS Switch for macOS 🛡️**
+
 A lightweight, native menu bar utility designed to instantly toggle between DNS providers, manage custom profiles, and flush the system DNS cache with a single click.
 
-🚀 Key Features
+**🚀 Key Features**
+
 One-Click Toggles: Effortlessly switch between Cloudflare, Google, AdGuard, and Quad9.
 
 Custom Profiles: Add and save your own primary and secondary IPv4 addresses.
@@ -12,7 +14,8 @@ DNS Cache Flush: Includes a built-in utility to clear the system cache and force
 
 Native & Fast: Written in Swift and SwiftUI for a minimal footprint and "Liquid Glass" aesthetic.
 
-🛠️ Installation & First Run
+🛠️** Installation & First Run**
+
 Because this app is unsigned and modifies system network settings, follow these steps to get started:
 
 Download: Grab the DNS.Switch.zip from the Releases tab.
