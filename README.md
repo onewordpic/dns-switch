@@ -1,34 +1,36 @@
-**DNS Switch for macOS**
+# DNS Switch for macOS
 
-A lightweight, native menu bar utility designed to instantly toggle between DNS providers, manage custom profiles, and flush the system DNS cache with a single click.
+A lightweight, native menu bar utility designed to **instantly toggle between DNS providers**, **manage custom profiles**, and **flush the system DNS cache** with a single click.
 
-** 🚀 **Key Features**
+---
 
-One-Click Toggles: Effortlessly switch between Cloudflare, Google, AdGuard, and Quad9.
+### 🚀 Key Features
 
-Custom Profiles: Add and save your own primary and secondary IPv4 addresses.
+* **One-Click Toggles:** Effortlessly switch between predefined presets including **Cloudflare**, **Google**, **AdGuard**, and **Quad9**.
+* **Custom Profiles:** Configure, save, and manage dedicated **primary and secondary IPv4** server addresses.
+* **Global Hotkey:** Trigger instant DNS switching from anywhere on macOS via `Cmd + Shift + D`.
+* **DNS Cache Flush:** Includes a built-in utility to clear the local macOS resolver cache (`dscacheutil`) and force active routing updates.
+* **Native & Lightweight:** Built entirely with **Swift** and **SwiftUI** for a minimal CPU/memory footprint and seamless macOS desktop integration.
 
-Global Hotkey: Use Cmd + Shift + D to toggle your DNS from anywhere on your Mac.
+---
 
-DNS Cache Flush: Includes a built-in utility to clear the system cache and force new routes.
+### 🛠️ Installation & First Run
 
-Native & Fast: Written in Swift and SwiftUI for a minimal footprint and "Liquid Glass" aesthetic.
+Because the application is distributed unsigned and directly interacts with system network interfaces, follow these standard steps:
 
-🛠️ **Installation & First Run**
+1. **Download:** Download `DNS.Switch.zip` from the latest **Releases** tab.
+2. **Install:** Extract the archive and move **DNS Switch.app** to your `/Applications` directory.
+3. **Bypass Gatekeeper:** 
+   * Right-click (or Control-click) **DNS Switch.app** and select **Open**.
+   * When prompted with the unsigned developer dialog, click **Open** to confirm.
+4. **Permissions Setup:**
+   * **Admin Privileges:** macOS will request administrator credentials when applying changes, as modifying network resolvers requires elevated rights.
+   * **Accessibility Access:** To enable the global hotkey shortcut, grant access under **System Settings** → **Privacy & Security** → **Accessibility**.
 
-Because this app is unsigned and modifies system network settings, follow these steps to get started:
+---
 
-Download: Grab the DNS.Switch.zip from the Releases tab.
+### 🔒 Privacy & Security Architecture
 
-Move to Applications: Unzip and drag the app into your /Applications folder.
-
-Bypass Gatekeeper: Right-click the app and select Open. You will see a warning; click Open again. (This is required for independent, unsigned software).
-
-Permissions:
-
-Admin Password: macOS will ask for your password when you connect/disconnect. This is required because changing DNS is a system-level action.
-
-Accessibility: To use the Global Hotkey, you must allow the app in System Settings > Privacy & Security > Accessibility.
-
-🔒 **Privacy & Security**
-This app is open source. It works by acting as a native wrapper for the macOS /usr/sbin/networksetup command. It does not track your traffic or collect any data.
+* **Transparent Execution:** Fully open-source and auditable.
+* **Native Wrappers:** Operates strictly as a clean GUI wrapper around the standard macOS `/usr/sbin/networksetup` binary.
+* **Zero Telemetry:** No background data collection, no external API calls, and zero traffic inspection. All configurations remain local to your machine.
